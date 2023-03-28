@@ -1,0 +1,174 @@
+@import url('https://fonts.cdnfonts.com/css/common-pixel');
+@import "C:/Users/LuisF/Desktop/Javascript project/pixel-borders-master.zip";
+@import url(sass.scss);
+
+
+body{
+    background-color: black;
+    color: white;
+    overflow:hidden;
+    font-family: 'Common Pixel', sans-serif;
+}
+
+
+
+
+/* raindrops*/
+
+hr{
+    width: 50px;
+    border-color: transparent;
+    border-right-color: rgba(255, 255, 255, 0.7);
+    border-right-width: 50px;
+    position: absolute;
+    bottom: 100%;
+    transform-origin: 100% 50%;
+    animation-name: rain;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rain{
+    from{
+        transform: rotate(102deg) translateX(0);
+    }
+    to{
+        transform: rotate(105deg) translateX(calc(100vh + 20px))
+    }
+} 
+
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+
+/*------------------------ Navi------------------*/
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 150px;
+    height: 100%;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+    border-radius: 3%;
+
+  }
+  
+  .sidebar.show {
+    left: 0;
+    width: 250px;
+    border-width: 5px;
+    border-style: solid;
+    background-color: #141314;
+    
+  }
+
+  /* -----------pixel borders*-----------------*/
+  
+  
+  #toggle-sidebar {
+    position: fixed;
+    top: 20px;
+    left:100px;
+    transform: translateX(-50%);
+    font-family: 'Common Pixel', sans-serif;
+    z-index: 999;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+
+
+  
+  
+  #toggle-sidebar:hover {
+    cursor: pointer;
+    opacity:0.4;
+    transition:ease-in-out 1s ;
+  }
+  
+  .fas.fa-gamepad {
+    font-size: 20px;
+    border-style : solid;
+    border-color: white;
+    border-radius: 2px;
+    padding: 10px;
+  }
+
+
+  #sidebar-list{
+  margin-top: 50px;
+  font-size: 25px;
+  padding: 10px;
+  
+}
+
+
+  
+  /*------------------- END NAVI------------------------*/
+
+  .introText{
+    text-align: center;
+    font-size: 30px;
+  }
+
+  #myCanvas{
+    padding: 0;
+    margin: auto;
+    display: flex;
+    width: 800px;
+    height: 400px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border : 1px solid;
+  }
+
+.primary{
+    text-align:center;
+}
+
+/*----------------- Choice CSS--------------------*/
+
+.choices {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 20px;
+  font-size: 25px;
+  
+}
+
+.choice1,
+.choice2 {
+  order: 1;
+ 
+  
+}
+
+.choice3,
+.choice4 {
+  order: 2;
+  
+}
+
+.choice1,
+.choice2,
+.choice3,
+.choice4 {
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  padding: 5px;
+  flex-basis: 40%;
+  margin-bottom:10px;
+  
+  
+}
